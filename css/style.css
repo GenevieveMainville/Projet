@@ -1,0 +1,208 @@
+:root{
+    --font-regular:'Open Sans Condensed', sans-serif;
+    --font-bold:700;
+    
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    margin:0;
+    padding:0;
+}
+
+a, a:hover{
+    text-decoration: none;   
+    color:black;
+}
+
+ul{
+    list-style-type: none;
+}
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+button{
+    border: solid 1px black;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 10px;
+
+}
+.bouton__rv{
+    text-align:center;
+    padding-bottom: 100px;
+}
+button:hover, .button--link:hover{
+    background-color: black;
+    color:white;
+
+}
+
+.wrapper{
+    padding:0 8vw;
+}
+img {
+    width: 100%;
+    object-fit:cover;
+    box-sizing: border-box;
+    margin:0;
+  }
+header{
+    width: 100%;
+    background-color: whitesmoke;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+
+}
+input{
+    padding: 5px;
+    width: 200px;
+}
+label{
+    padding: 5px;
+}
+.logo{
+    
+}
+.logo__la{
+
+}
+.logo__titre{
+
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    width:30%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.menu__link{
+    padding-bottom: 5px;
+}
+.menu__link:hover{
+    border-bottom:2px solid black;
+}
+.hero{  
+    position: relative;
+    display:flex;
+    width:100%;
+    overflow: hidden;
+    height: 40vw;;
+   
+}
+.hero__img{
+    
+}
+.hero__text{
+   top: 30%;
+   left: 15%;
+   position: absolute; 
+   text-align: center;
+   
+
+}
+.hero__text--droite{
+    top: 15%;
+    left: 60%;
+    position: absolute; 
+    text-align: center;
+    
+ 
+ }
+.hero__titre{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* GRID */
+.grid{
+    display: grid;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.grid--3 {
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid__wrapper{
+    position: relative;
+    
+}
+    .grid__text{
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    font-size: 2vw;
+    padding:0 25px;
+    text-transform: uppercase;
+}
+.grid__wrapper:hover{
+    opacity:0.8;
+    
+}
+/* ||LOGIN*/
+.login{
+    width: max-content;
+    
+}
+.login__input-wrapper{
+    display:flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+.form__btn{
+    width:100%;
+}
+.titre{
+    padding-top:100px;
+    text-align: center;
+    font-size:3vw;
+    text-transform: uppercase;
+}
+.texte{
+    text-align: center;
+    padding: 50px;
+    font-size: 2vw;
+}
+
+
+
+/* ||FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding:25px;
+    background-color: whitesmoke;
+    
+}
+.footer__nav{
+    display:flex;
+    align-items: center;
+    width:80%;
+    justify-content: space-evenly;
+    
+}
+.icon{
+   display:flex;
+   justify-content: space-between;
+
+}
+.icon__wrapper{
+   width:15%;
+}
+.footer__line{
+    line-height: 25px;;
+}
