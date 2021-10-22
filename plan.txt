@@ -1,0 +1,18 @@
+Nom de domaine : https://www.projetenviro.epizy.com/index.html
+
+
+Implémentation
+
+1)	Accueil.
+2)	Page création d’utilisateur.
+3)	Page login.
+4)	Création de la base de données.
+5)	Page php de création d’utilisateur et validation des champs, vérification du mot de passe,hachage,salage.
+6)	Page php de login et création de session. 
+7)	Page de prise de rendez-vous.
+8)	Page php de rendez-vous pour insérer dans la bd.
+9)	Page portfolio.
+10)	Script js
+11)	Lien logout.
+
+
