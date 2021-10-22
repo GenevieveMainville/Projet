@@ -1,0 +1,279 @@
+:root{
+    --font-regular:'Open Sans Condensed', sans-serif;
+    --font-bold:700;
+    
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    margin:0;
+    padding:0;
+    
+}
+
+a, a:hover{
+    text-decoration: none;   
+    color:black;
+}
+
+ul{
+    list-style-type: none;
+}
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+/* Bouton */
+button{
+    border: solid 1px black;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+.bouton__wrapper{
+    padding:20px;
+}
+.bouton__rv{
+    text-align:center;
+    padding-bottom: 100px;
+}
+button:hover, .button--link:hover{
+    background-color: black;
+    color:white;
+
+}
+/* wrapper */
+.wrapper{
+    padding:0 8vw;
+}
+/*horaire */
+.horaire__input{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+.horaire__form{
+    width:50%;
+}
+.horaire{
+    display:flex;
+    justify-content: center;
+
+}
+
+.erreur{
+    font-size: 25px;
+    border: 1px solid red;
+    padding: 5px;
+}
+select{
+    font-size:1.1vw;
+    width: 200px;
+}
+/* image */
+img{
+    width: 100%;
+    object-fit:cover;
+    box-sizing: border-box;
+    margin:0;
+}
+.image {
+    width: 100%;
+    height: 20vw;
+    object-fit:cover;
+    box-sizing: border-box;
+    margin:0;
+  }
+  /*header*/
+header{
+    width: 100%;
+    height:120px;
+    background-color: whitesmoke;
+}
+/*nav */
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+
+}
+form{
+    font-size:1.3vw;
+}
+input{
+    font-size:1.1vw;
+    padding: 7px;
+    width: 200px;
+}
+label{
+    padding: 5px;
+}
+/*logo*/
+.logo__la{
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 55px;
+    text-transform: uppercase;
+}
+.logo__titre{
+    font-family: 'Gruppo', cursive;
+    font-size: 25px;
+}
+.menu{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width:25%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.menu__link{
+    font-size:1.5vw;
+    padding-bottom: 5px;
+}
+.menu__link:hover{
+    border-bottom:2px solid black;
+}
+/*hero*/
+.hero{  
+    position: relative;
+    display:flex;
+    width:100%;
+    overflow: hidden;
+    height: 46vw;;
+   
+}
+
+.hero__text{
+   top: 25%;
+   left: 15%;
+   position: absolute; 
+   text-align: center;
+   
+
+}
+.hero__text--droite{
+    top: 15%;
+    left: 60%;
+    position: absolute; 
+    text-align: center;
+    
+ 
+ }
+.hero__titre{
+    
+    text-transform: uppercase;
+    font-size:3vw;
+    letter-spacing: 3px;;
+}
+/*booking*/
+.booking{
+    display: flex;
+}
+.booking__img{
+    width:40%;
+    
+}
+.booking__contenu{
+    display:flex;
+    flex-direction: column;
+}
+/* GRID */
+.grid{
+    display: grid;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.grid--3 {
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid__wrapper{
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.grid__text{
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    font-size: 2vw;
+    padding:0 25px;
+    text-transform: uppercase;
+}
+.grid__wrapper:hover{
+    opacity:0.8;
+    
+}
+/* ||LOGIN*/
+.login{
+    width: max-content;
+    
+}
+.input-wrapper{
+    display:flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.form__btn{
+    width:100%;
+}
+.titre{
+    padding-top:50px;
+    text-align: center;
+    font-size:2.8vw;
+    text-transform: uppercase;
+}
+.texte{
+    text-align: center;
+    padding: 50px;
+    font-size: 2vw;
+}
+
+
+/* ||FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding:25px;
+    background-color: whitesmoke;
+   
+    
+}
+.footer__nav-wrapper{
+    display: flex;
+    width:40%;
+}
+.footer__nav{
+    display:flex;
+    align-items: center;
+    width:100%;
+    justify-content: space-between;
+    
+}
+.footer__nav-link{
+    padding-left:30px;
+    padding-right:30px;
+}
+.icon{
+   display:flex;
+   justify-content: space-between;
+
+}
+.icon__wrapper{
+  width:25px;
+}
+.footer__line{
+    line-height: 40px;;
+}
