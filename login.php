@@ -1,11 +1,28 @@
 <!DOCTYPE html>
+<?php
+$msg = null;
+if(isset($_GET['msg']))
+        {
+          if($_GET['msg']==1)
+          {
+            $msg = "Le mot de passe ou le nom de l'utilisateur est incorrect";
+          }
+          
+          else if($_GET['msg']==2)
+          {
+            $msg = "Le mot de passe ou le nom de l'utilisateur est incorrect";
+          }
+        }
+?>
 <html lang="fr">
     <head>
         <meta charset="utf-8"> 
         <meta name="Description" content="">
-        <title>Login | La - Photographie</title>
+        <title>LA - Photographie</title>
         <link rel="stylesheet" href="./css/style.css">
+        <script src="./script/script.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Gruppo&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -14,61 +31,60 @@
             <nav class="nav">
                 <div class="logo">
                     <a href="./index.html">
-                        <span class="logo__la">La</span><span class="logo__titre">Photographie</span>
+                        <span class="logo__la">La  </span><span class="logo__titre">Photographie</span>
                     </a>
                 </div>
                
                 <ul class="menu">
-                    <li><a class="menu__link" href="#">Services</a></li>
-                    <li><a class="menu__link" href="#">Portfolio</a></li>
-                    <li><a class="menu__link" href="#">Login</a></li>
+                    <li><a class="menu__link" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="menu__link" href="login.php">Login</a></li>
                 </ul>
-         
             </nav>
         </header>  
+ 
         <div class="hero">
             <div>
                 <img src="img/hero3.jpg" />
             </div>
             <div class="hero__text">
                 <div class="login">
-                    <form action="saisir-user.php" method="POST">
-                        <div class="login__input-wrapper">
+                    <div data-js-erreur class=""><?php echo "<span>".$msg."</span>"; ?></div>
+                    <form action="authentification.php" method="POST">
+                        <div class="input-wrapper">
                             <label>Nom d'utilisateur  </label>
-                            <input type="email" name="user" maxlength="45" required>
+                            <input type="email" name="username" maxlength="45" required>
                         </div>
-                        <div class="login__input-wrapper">
+                        <div class="input-wrapper">
                             <label>Mot de passe  </label>
-                            <input type="password" name="password" required >
+                            <input type="password" name="userpassword" required >
                         </div>
-                        <div class="login__input-wrapper">
-                            <input data-js-login class="form__btn" type="submit" value="Connecter"/>  
+                        <div >
+                            <button data-js-login class="form__btn">Connecter</button>  
                         </div>
                     </form> 
-                    <a class="button--link" href="creer.php">Pas de compte? Créez un compte</a>
+                    <a href="creer.php">Pas de compte? Créez un compte</a>
                 </div>
             </div>
-            <div class="erreur">
-                <?php
-                    $msg = null;
-                    if(isset($_POST["msg"]))
-                    {
-                        if($_POST["msg"]==1 || $_POST["msg"]==1)
-                        {
-                            echo "Mot de passe ou utilisateur incorrect"
-                        }
-                    }
-                ?>
-            </div>
-        </div>
+            
+        </div>   
+        <?php
+        
+        
+        ?>  
     </body>
     <footer >
             <div class="logo footer__line">
                 <a href="./index.html">
-                    <span class="logo__la">La</span><span class="logo__titre">Photographie</span>
+                    <span class="logo__la">La  </span><span class="logo__titre">Photographie</span>
                 </a>
                 <p>1111 rue Canon, Montréal</p>
-                <ul class="icon">
+                
+                <!--Navigation-->
+            </div>
+            <div class="footer__nav-wrapper">
+                <ul class="footer__nav">
+                  <li ><a class="footer__nav-link" href="index.html">Services</a></li>
+                  <li ><a class="footer__nav-link" href="portfolio.html">Portfolio</a></li>
                     <!-- Facebook -->
                     <li class="icon__wrapper">
                         <a  href="#">
@@ -89,12 +105,5 @@
                     </li>
                 </ul>
             </div>
-          
-                <ul class="footer__nav">
-                  <li ><a class="footer__nav-link" href="#">Contact</a></li>
-                  <li ><a class="footer__nav-link" href="#">Portfolio</a></li>
-                  <li ><a class="footer__nav-link" href="#">Commande</a></li>
-                </ul>
-         
-          </footer>
+        </footer>
 </html>

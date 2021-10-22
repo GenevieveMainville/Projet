@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
+<head>
         <meta charset="utf-8"> 
         <meta name="Description" content="">
         <title>LA - Photographie</title>
@@ -22,94 +22,64 @@
                
                 <ul class="menu">
                     <li><a class="menu__link" href="portfolio.html">Portfolio</a></li>
-                    <li><a class="menu__link" href="#">Login</a></li>
+                    <li><a class="menu__link" href="logout.php">Logout</a></li>
                 </ul>
             </nav>
         </header>  
         <body>
-            <div class="hero">
-                <img src="img/hero.jpg" />
-                <div class="hero__text">
-                  <p class="hero__titre">Studio créateur de souvenirs</p>
-                  <div class="bouton__wrapper">
-                    <a class="button--link" href="login.php"><button>Prendre rendez-vous</button></a>
-                </div>
-                </div>
-            </div>
-
-
-
-
-            <section>
-                <div class="titre">
-                    <h1>Nos services</h1>
-                </div>
-                <div class="wrapper">
-                    <div class="texte">
-                        <p>Plusieurs types de séances sont disponibles soit dans notre studio ou bien à l'endroit de votre choix. 
-                            Nous sommes flexibles et serons à l'écoute de vos besoins afin de créer une expérience photo inoubliable. 
-                        </p>
-                    </div>
-                </div>
-                <div class="grid grid--3 wrapper">
-                   
-                        <div class="grid__wrapper">
-                            <a href=login.php>
-                            <div class="grid__text">
-                                Familiale/Groupe
-                            </div>
-                            <img src="img/famille.jpg" />
-                        </a>
-                        </div>
+            <section class="">
+                <div class="booking">
                     
-                        <div class="grid__wrapper">
-                             <a href=login.php>
-                            <div class="grid__text">
-                                Animale
-                            </div>
-                            <img src="img/chat.jpg" />
-                        </a>
+                                <img class="booking__img" src="img/dog.jpg" />
+                        <div class="booking__contenu">  
+                        <div class="titre wrapper">
+                            <h1>Pour un rendez-vous en studio</h1>
                         </div>
-                    <div class="grid__wrapper">
-                         <a href=login.php>
-                        <div class="grid__text">
-                            Mariage
+                        <div class="texte">
+                            <p>
+                                Choisissez une plage horaire
+                            </p>
                         </div>
-                        <img src="img/mariage2.jpg" />
-                    </a>
-                    </div>
 
-                    <div class="grid__wrapper">
-                         <a href=login.php>
-                        <div class="grid__text">
-                            Corporatif
-                        </div>
-                        <img src="img/conference.jpg" />
-                    </a>
-                    </div>
-                    <div class="grid__wrapper">
-                         <a href=login.php>
-                        <div class="grid__text">
-                            Portrait
-                        </div>
-                        <img src="img/portrait2.jpg" />
-                    </a>
-                    </div>
-                    <div class="grid__wrapper">
-                         <a href=login.php>
-                        <div class="grid__text">
-                            Évènementiel
-                        </div>
-                        <img src="img/show.jpg" />
-                    </a>
-                    </div>
-                </div>
-                <div class="bouton__rv">
-                    <a class="button--link" href="login.php"><button>Prendre rendez-vous</button></a>
-                </div>
+                        <div class="horaire">
+                            <form class="horaire__form"action="seance.php" method="POST">
+                                <div class="horaire__input">
+                                    <label for="rvchoix">Choisissez le type de séance</label>
+                                    <select name ="rvchoix">
+                                        <option value="groupe">Familiale/Groupe</option>
+                                        <option value="animal">Animale</option>
+                                        <option value="mariage">Mariage</option>
+                                        <option value="corporatif">Corporatif</option>
+                                        <option value="Portrait">Portrait</option>
+                                        <option value="evenementiel">Évènementiel</option>
+                                    </select>
+                                </div>
+
+                                <div class="horaire__input">
+                                    <label>Date de la séance </label>
+                                    <input type="date" name="rvdate" required>
+                                </div>
+
+                                <div class="horaire__input">
+                                    <label for="rvheure">Choisissez l'heure</label>
+                                    <select name ="rvheure">
+                                        <option value="10h - 11h">10h - 11h</option>
+                                        <option value="13h - 14h">13h - 14h</option>
+                                        <option value="14h - 15h">14h - 15h</option>
+                                        <option value="15h - 16h">15h - 16h</option>
+                                        <option value="16h - 17h">16h - 17h</option>
+                                        <option value="18h - 19h">18h - 19h</option>
+                                    </select>
+                                </div>
+                                <div >
+                                    <button class="form__btn">Confirmer</button> 
+                                </div>
+                            </form>
+                        </div> 
+                        </div>  
+                     </div>
             </section>
         </body>
-
         <footer >
             <div class="logo footer__line">
                 <a href="./index.html">
