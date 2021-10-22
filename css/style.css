@@ -10,6 +10,7 @@
     font-family: var(--font-primary);
     margin:0;
     padding:0;
+    
 }
 
 a, a:hover{
@@ -33,7 +34,10 @@ button{
     cursor: pointer;
     background-color: white;
     padding: 5px 10px;
-
+    font-size: 20px;
+}
+.bouton__wrapper{
+    padding:20px;
 }
 .bouton__rv{
     text-align:center;
@@ -48,14 +52,45 @@ button:hover, .button--link:hover{
 .wrapper{
     padding:0 8vw;
 }
-img {
+.horaire__input{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+.horaire__form{
+    width:50%;
+}
+.horaire{
+    display:flex;
+    justify-content: center;
+
+}
+.erreur{
+    font-size: 25px;
+    border: 1px solid red;
+    padding: 5px;
+}
+select{
+    font-size:1.1vw;
+    width: 200px;
+}
+img{
     width: 100%;
+    object-fit:cover;
+    box-sizing: border-box;
+    margin:0;
+}
+.image {
+    width: 100%;
+    height: 20vw;
     object-fit:cover;
     box-sizing: border-box;
     margin:0;
   }
 header{
     width: 100%;
+    height:120px;
     background-color: whitesmoke;
 }
 nav{
@@ -64,30 +99,37 @@ nav{
     padding: 25px;
 
 }
+form{
+    font-size:1.3vw;
+}
 input{
-    padding: 5px;
+    font-size:1.1vw;
+    padding: 7px;
     width: 200px;
 }
 label{
     padding: 5px;
 }
-.logo{
-    
-}
-.logo__la{
 
+.logo__la{
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 55px;
+    text-transform: uppercase;
 }
 .logo__titre{
-
+    font-family: 'Gruppo', cursive;
+    font-size: 25px;
 }
 .menu{
     display: flex;
+    align-self: center;
     justify-content: space-between;
-    width:30%;
+    width:25%;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
 .menu__link{
+    font-size:1.5vw;
     padding-bottom: 5px;
 }
 .menu__link:hover{
@@ -98,14 +140,12 @@ label{
     display:flex;
     width:100%;
     overflow: hidden;
-    height: 40vw;;
+    height: 46vw;;
    
 }
-.hero__img{
-    
-}
+
 .hero__text{
-   top: 30%;
+   top: 25%;
    left: 15%;
    position: absolute; 
    text-align: center;
@@ -121,10 +161,22 @@ label{
  
  }
 .hero__titre{
-    font-weight: 700;
+    
     text-transform: uppercase;
+    font-size:3vw;
+    letter-spacing: 3px;;
 }
-
+.booking{
+    display: flex;
+}
+.booking__img{
+    width:40%;
+    
+}
+.booking__contenu{
+    display:flex;
+    flex-direction: column;
+}
 /* GRID */
 .grid{
     display: grid;
@@ -139,9 +191,11 @@ label{
 
 .grid__wrapper{
     position: relative;
+    overflow: hidden;
     
 }
-    .grid__text{
+
+.grid__text{
     position: absolute;
     color: white;
     font-weight: 700;
@@ -158,18 +212,19 @@ label{
     width: max-content;
     
 }
-.login__input-wrapper{
+.input-wrapper{
     display:flex;
-    padding: 15px;
     justify-content: space-between;
+    padding: 15px;
 }
+
 .form__btn{
     width:100%;
 }
 .titre{
-    padding-top:100px;
+    padding-top:50px;
     text-align: center;
-    font-size:3vw;
+    font-size:2.8vw;
     text-transform: uppercase;
 }
 .texte{
@@ -179,21 +234,29 @@ label{
 }
 
 
-
 /* ||FOOTER */
 footer{
     display: flex;
     justify-content: space-between;
     padding:25px;
     background-color: whitesmoke;
+   
     
+}
+.footer__nav-wrapper{
+    display: flex;
+    width:40%;
 }
 .footer__nav{
     display:flex;
     align-items: center;
-    width:80%;
-    justify-content: space-evenly;
+    width:100%;
+    justify-content: space-between;
     
+}
+.footer__nav-link{
+    padding-left:30px;
+    padding-right:30px;
 }
 .icon{
    display:flex;
@@ -201,8 +264,8 @@ footer{
 
 }
 .icon__wrapper{
-   width:15%;
+  width:25px;
 }
 .footer__line{
-    line-height: 25px;;
+    line-height: 40px;;
 }
