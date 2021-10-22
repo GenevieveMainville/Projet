@@ -3,13 +3,13 @@
 require ('include/connex.php');
 
 
-    $valideUser = false;
-    $validePassword = false;
+    
         
     foreach ($_POST as $key => $value) {
         $$key = mysqli_real_escape_string($con, $value);
     }
-
+    $valideUser = false;
+    $validePassword = false;
     $sql = "SELECT * FROM user WHERE username = '$username'";
     $result = mysqli_query($con, $sql);
     $rowcount = mysqli_num_rows($result);
@@ -19,7 +19,7 @@ require ('include/connex.php');
        $valideUser = true;  
     }
     else{
-        echo "deja un compte";
+        header("Location: creer.php?msg=2");;
     }
     
     if(preg_match("/[0-9a-zA-Z -\/:-@\[-\`{-~]{15,}/", $userpassword))
@@ -28,8 +28,9 @@ require ('include/connex.php');
     }
     else
     {
-        echo "Le mot de passe doit contenir plus de 15 caractères.";
+        header("Location: creer.php?msg=1");
     }
+    
     if($valideUser && $validePassword)
     {
         $password_hash = password_hash($userpassword,PASSWORD_BCRYPT);
