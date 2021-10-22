@@ -14,5 +14,7 @@ Implémentation
 9)	Page portfolio.
 10)	Script js
 11)	Lien logout.
+12)	Créer la base de données sur le serveur
+13)	Ajouter le code sur le serveur
 
 
